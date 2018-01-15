@@ -12,6 +12,16 @@ class TableForFool extends Table
     private $_leverage;
     private $_rule;
 
+
+    public function removeCards(): array
+    {
+        $cards = parent::getCards();
+
+        parent::setCards([]);
+
+        return $cards;
+    }
+
     public function setRule(IFooRule $rule)
     {
         $this->_rule = $rule;

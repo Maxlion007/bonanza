@@ -8,7 +8,6 @@ use core\games\game\fool\rules\FoolRule;
 use core\games\game\Game;
 use core\games\ranks\CardRank;
 use core\games\suits\CardSuit;
-use core\games\suits\ICardSuit;
 use core\games\suits\Suit;
 
 class FoolGame extends Game
@@ -44,6 +43,11 @@ class FoolGame extends Game
         $card2 = new Card(new CardRank($card1->getCardRank()->getRank()), new CardSuit(Suit::DIAMOND));
         $enemyCard = $player2->getCard();
         $this->getTable()->addCard($card1);
+        $this->getTable()->addCard($card1);
+        $this->getTable()->addCard($card1);
+        $isSecondAdded = $this->getTable()->addCard($card2);
+        $isSecondAdded = $this->getTable()->addCard($card2);
+        $isSecondAdded = $this->getTable()->addCard($card2);
         $isSecondAdded = $this->getTable()->addCard($card2);
         echo "Вторая карта:\n";
         var_dump($isSecondAdded);

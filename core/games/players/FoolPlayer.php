@@ -7,11 +7,6 @@ use core\games\suits\ICardSuit;
 
 class FoolPlayer extends Player implements IFoolPlayer
 {
-    public function move(ICard $myCard, ICard $enemyCard = null)
-    {
-        echo "Player move...\n";
-    }
-
     public function getMaxCard(ICardSuit $suit)
     {
         $myCards = $this->getCards();
@@ -29,5 +24,12 @@ class FoolPlayer extends Player implements IFoolPlayer
         });
 
         return isset($leverageCards[0]) ? $leverageCards[0] : null;
+    }
+
+    public function addCards(array $cards)
+    {
+        foreach ($cards as $card) {
+            parent::addCard($card);
+        }
     }
 }
