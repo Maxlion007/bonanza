@@ -7,6 +7,13 @@ use core\games\suits\ICardSuit;
 
 class FoolPlayer extends Player implements IFoolPlayer
 {
+    private $_straps = [];
+
+    public function addStrap(ICard $card)
+    {
+        $this->_straps[] = $card;
+    }
+
     public function getMaxCard(ICardSuit $suit)
     {
         $myCards = $this->getCards();
