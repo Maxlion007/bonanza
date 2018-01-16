@@ -9,6 +9,7 @@ class FoolPlayer extends Player implements IFoolPlayer
 {
     private $_straps = [];
 
+    // Добавление погонов
     public function addStrap(ICard $card)
     {
         $this->_straps[] = $card;

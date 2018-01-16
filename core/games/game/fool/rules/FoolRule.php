@@ -49,4 +49,10 @@ class FoolRule implements IFooRule
 
         return false;
     }
+
+    // Проверка на добавление погонов
+    public function canAddStrap(ICard $card): bool
+    {
+        return false;
+    }
 }

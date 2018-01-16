@@ -9,4 +9,5 @@ interface IFooRule
 {
     public function canBit(ICard $forBit, ICard $bit, ICardSuit $leverage):bool;
     public function canAdd(ICard $card, array $tableCards):bool;
+    public function canAddStrap(ICard $card):bool;
 }
