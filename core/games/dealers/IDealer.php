@@ -7,4 +7,5 @@ use core\games\deck\ICardDeck;
 
 interface IDealer
 {
+    public function getCard();
 }
