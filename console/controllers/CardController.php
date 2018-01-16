@@ -24,4 +24,9 @@ class CardController extends Controller
         $foolGame->setTable($table);
         $foolGame->start();
     }
+
+    public function actionTest()
+    {
+
+    }
 }
