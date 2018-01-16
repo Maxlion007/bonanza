@@ -17,6 +17,18 @@ class TableForFool extends Table
     {
         $cards = parent::getCards();
 
+        $tmp = [];
+        // поиск вложеных карт
+        foreach ($cards as $card) {
+            if (is_array($card)) {
+                foreach ($card as $c) {
+                    $tmp[] = $c;
+                }
+            } else {
+                $tmp[] = $card;
+            }
+        }
+
         parent::setCards([]);
 
         return $cards;
